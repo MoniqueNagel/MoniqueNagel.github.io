@@ -1,0 +1,24 @@
+p{
+   border: .8em #454545;
+   border-style: none;
+   margin: 35px 0;
+   padding: 35px;
+   background: #454545;
+   font-size: 30px;
+   font-style: oblique;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   text-align: center;
+}
+
+.border-box{background-clip: border-box;}
+.padding-box{background-clip: padding-box;}
+.content-box{background-clip: content-box;}
+
+.gradient-text{
+   background-image: linear-gradient(to right,#581845,#900C3F,#C70039,#FF5733,#FFC300);
+   background-size: 100%;
+   -webkit-background-clip: text;
+   -moz-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   -moz-text-fill-color: transparent;
+}

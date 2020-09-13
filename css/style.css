@@ -1,0 +1,74 @@
+body{
+    background-color:#454545;  
+}
+
+.name-wrapper{
+    
+    color: linear-gradient(to right,#581845,#900C3F,#C70039,#FF5733,#FFC300);
+    font: 14 px 'bold';
+    text-align: center;
+    background-color:#454545;    
+}
+
+.nav-wrapper{
+
+    /*Colours*/
+    background-color:#454545;
+   
+    /*Display & Margins*/
+    text-align: center;
+    padding: 20px;
+    margin: auto;
+    margin-right: 20px;
+    margin-top: 20px;
+    position: fixed;
+
+    /*Text & Font*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font: 12 px 'bold';
+    letter-spacing: 2,5px;
+    text-transform: uppercase;
+    border-bottom: 1px solid transparent #C70039;
+    text-decoration-color: #900C3F ;    
+}
+
+
+.nav-brand-wrapper{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font: 16px 'bold';
+    background-color: linear-gradient(#581845, #FFC300);
+
+
+    letter-spacing: 2,5px;
+    display: flex;
+    text-transform: uppercase;
+
+
+    justify-content: center;
+    margin: 20px;
+    margin-bottom: 30px;
+
+  
+
+
+
+
+}
+
+.background{
+    background-color: #454545;
+
+
+
+}
+
+.banner-wrapper{
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);    
+    background-image: linear-gradient(to right,#581845,#900C3F,#C70039,#FF5733,#FFC300);
+
+}
+
+
+
+
+
