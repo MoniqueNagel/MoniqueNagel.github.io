@@ -1,5 +1,5 @@
 body{
-    background-color:#454545;  
+    background-color:#444;  
 }
 
 .name-wrapper{
@@ -7,13 +7,13 @@ body{
     color: linear-gradient(to right,#581845,#900C3F,#C70039,#FF5733,#FFC300);
     font: 14 px 'bold';
     text-align: center;
-    background-color:#454545;    
+    background-color:#444;    
 }
 
 .nav-wrapper{
 
     /*Colours*/
-    background-color:#454545;
+    background-color:#444;
    
     /*Display & Margins*/
     text-align: center;
@@ -56,7 +56,7 @@ body{
 }
 
 .background{
-    background-color: #454545;
+    background-color: #444;
 
 
 

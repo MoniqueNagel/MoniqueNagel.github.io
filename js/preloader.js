@@ -1,5 +1,5 @@
-$(window).load(function(){
-   $('css/.loader').fadeOut('slow',function(){$(this).remove();});
-});
+var overlay = document.getElementById("overlay")
+
+
 
 

@@ -11,7 +11,7 @@ triangleCon{
    height:600px;
 }
 
-.triangle {
+#tri-loader .triangle {
    width: 0px;
    height: 0px;
    opacity: 0.75;
@@ -23,23 +23,23 @@ triangleCon{
    animation: enlarge_1 2s infinite;
 }
  
-.triangle:nth-child(2) {
+#tri-loader .triangle:nth-child(2) {
    animation: enlarge_2 2s infinite;
    animation-delay: 0.2s;
 }
  
-.triangle:nth-child(3) {
+#tri-loader .triangle:nth-child(3) {
    animation: enlarge_3 2s infinite;
    animation-delay: 0.4s;
 }
 
-.triangle:nth-child(4) {
+#tri-loader .triangle:nth-child(4) {
    animation: enlarge_4 2s infinite;
    animation-delay: 0.6s;
 
 }
 
-.triangle:nth-child(5) {
+#tri-loader .triangle:nth-child(5) {
    animation: enlarge_5 2s infinite;
    animation-delay: 0.8s;
 }
@@ -130,7 +130,7 @@ triangleCon{
    }
 }
 
-.loading {
+#tri-loader .loading {
    color: white;
    font-family: Verdana, Geneva, Tahoma, sans-serif;
    margin: auto;
@@ -142,6 +142,14 @@ triangleCon{
    font-weight: 10;
    letter-spacing: 10px;
 }
+
+/*body.loading .tri-loader{
+   overflow: hidden;
+}
+
+body.loading .tri-loader{
+   display: block;
+}*/
 
 
 
