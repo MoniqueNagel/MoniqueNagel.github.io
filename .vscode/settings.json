@@ -1,4 +1,8 @@
 {
-   "appService.defaultWebAppToDeploy": "/subscriptions/8a90995b-da3c-4d64-89f8-f51170d2bcae/resourceGroups/appsvc_windows_centralus/providers/Microsoft.Web/sites/MoniqueNagelTecCV",
-   "appService.deploySubpath": "."
+   "appService.deploySubpath": ".",
+   "appService.zipIgnorePattern": [
+      "node_modules{,/**}",
+      ".vscode{,/**}"
+   ],
+   "appService.defaultWebAppToDeploy": "/subscriptions/8a90995b-da3c-4d64-89f8-f51170d2bcae/resourceGroups/MoniqueNagel_TechCV/providers/Microsoft.Web/sites/moniquenagelcv"
 }
