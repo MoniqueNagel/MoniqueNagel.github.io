@@ -1,23 +1,12 @@
 {
-  "name": "m-nagel-29915376---project1-tecnical-cv",
+  "name": "m-nagel-29915376---project1-tecnhical-cv",
   "version": "0.1.0",
   "description": "A technical CV created to display all the information included on a CV.",
   "private": true,
-  "scripts": {
-    "start": "node ./bin/www"
-  },
+   
   "dependencies": {
-    "axios": "^0.20.0",
-    
-    "debug": "~2.6.9",
-    "dotenv": "^8.2.0",
-    "express": "^4.16.4",
-    "handlebars": "^4.7.6",
-    "http-errors": "~1.6.3",
-    "jquery": "^3.5.1",
-    "morgan": "~1.9.1",
-    "pug": "2.0.0-beta11",
-    "semantic-ui-css": "^2.4.1",
-    "vanilla-router": "^1.2.8"
+
+
   }
+  
 }
