@@ -1,16 +1,27 @@
 /*==========================
+   Colour Scheme:
+
+      #363538 -dark grey
+      #03989E -blue
+      #8D8C8A -light grey
+      #F6F6F6 -white
+============================*/
+
+
+/*==========================
    BODY
 ============================*/
 body{
    margin: 0;
+   
    min-height: 100vh;
-   background: #454545; 
+   background: #363538; 
    font-family: Verdana, Geneva, Tahoma, sans-serif;
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
 }
 
- 
+
 @media(min-width: 40em){
 
 }
@@ -21,27 +32,27 @@ body{
 ============================*/
 #header{
    text-align: center;
+   
 }
 
 #header .hello{
-   margin-bottom: -2em;
-   color: whitesmoke;
    font-size: 3em;
+   margin-bottom: -2em;
+   color: #F6F6F6;
+   font-weight: bold;
    line-height: 1em;
 }
  
 #header .name-highlight{
-   font-size: 4em;
-   line-height: 3em;
-         
+   font-size: 2em;
+   font-weight: bolder;
+   line-height: 1em;       
    background:transparent;
    background-color: transparent;
    background: linear-gradient(#900C3F,#C70039,#FF5733,#FFC300);
-   
    /* Set thee background size and repeat properties. */
-   background-size: 100%;
+   background-size: 20%;
    background-repeat: repeat;
-
    /* Use the text as a mask for the background. */
    /* This will show the gradient as a text color rather than element bg. */
    background-clip: text;
@@ -70,15 +81,13 @@ body{
 }
  
 #header .btn-view-cv{ 
-   /*layout*/
-   border: solid whitesmoke 0.125em;
+   margin-top: 10em;
+   border: solid #F6F6F6 0.125em;
    padding: 0.625em 2em;  
    display:inline-block;
    position: relative;
    z-index: 0;
-      
-   /*style*/
-   color: whitesmoke;
+   color: #F6F6F6;
    font-size: 1.25em;
    text-align: center;
    text-decoration: none;
@@ -95,7 +104,6 @@ body{
    Navbar
 ============================*/
 nav{
-   /*layout*/
    mask-image: linear-gradient(rgba(255, 255, 255, 0) 0%, #ffffff 25%, #ffffff 75%, rgba(255, 255, 255, 0) 100%);
    outline: none;
    overflow: hidden;
@@ -106,14 +114,10 @@ nav ul{
    background: linear-gradient(90deg rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
    outline: none;
-   text-align: center;
-
-   /*layout*/
-   
+   text-align: center;  
 }
 
 nav ul li{
-   /*layout*/
    display: inline-block;
 }
 
@@ -121,7 +125,7 @@ nav ul li a{
    padding: 18px;
    text-transform:uppercase;
    font-weight: bold;
-   color: rgba(0, 35, 122, 0.5);
+   color: #03989E;
    font-size: 18px;
    text-decoration: none;
    display: block;
@@ -131,7 +135,7 @@ nav ul li a{
 #navbar ul li a:hover{
    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
    background: rgba(255, 255, 255, 0.1);
-   color: rgba(0, 35, 122, 0.7);
+   color: #03989E;
    
 }
 
@@ -145,80 +149,79 @@ nav ul li a{
 }
 
 
-
-
-
-
 /*==========================
    CONTENT
 ============================*/
-
-#content{
-   /*layout*/
+#profile, #background, #skills, #portfolio, #contact{
    margin-left: 4em;
    margin-right: 4em;
    margin-top: 2.5em;
    margin-bottom: 2.5em;
-   /*style*/
 }
 
-#content h1{
-   /*layout*/
+
+h1{ 
    text-align: center;
    padding: 2px;
    margin: 1em;
-   /*style*/
-   color: /*darkslategrey*/whitesmoke;
+   color: #F6F6F6;
    text-transform: uppercase;
    font-size: 1.5em;
    line-height: 1.6em;
-   border-bottom: 1px solid whitesmoke/*darkslategrey*/;
+   border-bottom: 1px solid #F6F6F6;
+   border-bottom-width: 100% ;
 }
 
-#content h2{
-   /*layout*/
+h2{
    text-align: center;
    padding: 2px;
    margin: 1em;
-   /*style*/
-   color: /*darkslategrey*/whitesmoke;
+   color: #F6F6F6;
    text-transform: uppercase;
    font-size: 1em;
    line-height: 1em;
 }
 
-#content p, blockquote{
-   /*layout*/
+p, blockquote{
    text-align: center;
-   /*style*/
-   color: whitesmoke;
+   color: #F6F6F6;
    font-size: 1em;
    line-height: 2em;
-
-
-
 }
 
 .p-traits-skills b{
    /*style*/
-   color: darkslategray;
+   color: #03989E;
 }
-
-
 
 
 /*==========================
-   About Me
+   Profile
 ============================*/
-#about-wrapper{
+#profile-wrapper{
+   background: #F6F6F6;
    text-align: center;
-   background: whitesmoke;
 }
 
+.pcv-btn button, .ccv-btn button, .recommendation-btn button{ 
+   display:flex;
+   background-color: #03989E;
+   border: solid #03989E 0.125em;
+   color: #F6F6F6;
+   display:inline-block;
+   font-size: 1em;
+   overflow: hidden;
+   padding: 0.625em 2em;  
+   position: relative;
+   text-align: center;
+   text-decoration: none;
+}
 
 /*==========================
    Background
 ============================*/
+
+
 
 
 
@@ -227,21 +230,122 @@ nav ul li a{
 ============================*/
 
 
-/*==========================
-   Portfolio
-============================*/
-
-
-
-
-
-
-
 
 
 /*==========================
-  Contact Me
+Portfolio
 ============================*/
+/*editing data retrieved from github through API*/
+
+.portfolio-carousel{
+   padding: 2em;
+   align-content: center;
+}
+
+.gw-repo-outer {
+   align-items: center;
+   width: 70%;
+}
+
+.gw-repo-outer:nth-child(2n + 1) {
+   align-items: center;
+}
+
+.gw-repo {
+   padding: 1em;
+   margin: 0 1.5em 1em 0;
+   border: 1px solid #F6F6F6;
+}
+
+.gw-repo:nth-child(2n) {
+   margin: 1.5em;
+}
+
+.gw-title{
+   margin-bottom: 0.3em;
+}
+
+.gw-name {
+   font-weight: bold;
+   color: #03989E;
+   text-decoration: none;
+   text-align: center;
+}
+
+.gw-stats {
+   display: inline-block;
+   margin: 0;
+   float: right;
+}
+
+.gw-lang {
+   font-size: 1em;
+   color:#8D8C8A;
+   text-align: center;
+}
+
+.gtw-repo-description{
+   color: #F6F6F6;
+   text-align: left;
+}
+
+
+
+.gw-name:hover{
+   opacity: 40%;
+}
+
+
+
+
+
+
+
+
+
+
+/*==========================
+  FOOTER
+============================*/
+/*social media*/
+.fa {
+   padding: 20px;
+   font-size: 3em;
+   width: 50px;
+   text-align: center;
+   text-decoration: none;
+   margin: 5px 2px;
+}
+
+.fa:hover {
+   opacity: 0.7;
+}
+
+.fa-linkedin {
+   background: #03989E;
+   color:  #F6F6F6;
+}
+
+.fa-github {
+   background: #03989E;
+   color: #F6F6F6;
+}
+
+.fa-skype {
+   background: #03989E;
+   color:  #F6F6F6;
+}
+
+.fa-reddit {
+   background: #03989E;
+   color:  #F6F6F6;
+}
+
+
+
+
+
+
 
 
 /*==========================

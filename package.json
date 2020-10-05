@@ -3,10 +3,7 @@
   "version": "0.1.0",
   "description": "A technical CV created to display all the information included on a CV.",
   "private": true,
-   
   "dependencies": {
-
-
+    "react-icons": "^3.11.0"
   }
-  
 }
