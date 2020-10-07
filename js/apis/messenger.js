@@ -28,20 +28,23 @@ $(document).ready(function(){
          }
       };
 
+      /*call api using ajax
+      sending message typed by user through to email*/
       $.ajax('https://api.emailjs.com/api/v1.0/email/send',{
          type: 'POST',
          data: JSON.stringify(data),
          contentType: 'application/json'
 
+      /*give success message when message has been sent*/
       }).done(function(){
          alert('Message sent!')
 
+      /*give fail message when message failed to send*/
       }).fail(function(error){
          alert('Oh no... Your message failed to send: ' + JSON.stringify(error));
       })
 
    })
-
 
 })
 
