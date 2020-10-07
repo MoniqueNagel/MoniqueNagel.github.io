@@ -7,7 +7,6 @@ $(document).ready(function(){
       const form = document.querySelector('form[id="contact-form"]');
       const senderName = form.elements['senderName'].value;
       const senderEmail = form.elements['senderEmail'].value;
-      const subject = form.elements['subject'].value;
       const message = form.elements['message'].value;
 
       
@@ -23,8 +22,7 @@ $(document).ready(function(){
             from_name: senderName,
             to_name: 'Monique',
             reply_to: senderEmail,
-            message: msgTemplate
-            
+            message: message 
          }
       };
 
