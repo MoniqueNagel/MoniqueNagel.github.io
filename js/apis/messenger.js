@@ -11,6 +11,7 @@ $(document).ready(function(){
 
       
       /*construction of the email and how I will be receiving the input from the person sending the message*/
+      const msgTemplate = "Message: " + message;
 
       mail.preventDefault();
 
@@ -22,27 +23,26 @@ $(document).ready(function(){
             from_name: senderName,
             to_name: 'Monique',
             reply_to: senderEmail,
-            message: message 
+            message: msgTemplate
+            
          }
       };
 
-      /*call api using ajax
-      sending message typed by user through to email*/
       $.ajax('https://api.emailjs.com/api/v1.0/email/send',{
          type: 'POST',
          data: JSON.stringify(data),
          contentType: 'application/json'
-
-      /*give success message when message has been sent*/
+      /*message was successfully sent*/
       }).done(function(){
          alert('Message sent!')
 
-      /*give fail message when message failed to send*/
+      /*message failed to send*/
       }).fail(function(error){
          alert('Oh no... Your message failed to send: ' + JSON.stringify(error));
       })
 
    })
+
 
 })
 
