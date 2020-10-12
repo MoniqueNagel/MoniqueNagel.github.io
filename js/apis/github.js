@@ -1,5 +1,5 @@
 
-(function() {
+(function githubAPI() {
   var data, cls, get, getNext, init, jsonp, make, makeWidget, text,
     indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; },
     hasProp = {}.hasOwnProperty;

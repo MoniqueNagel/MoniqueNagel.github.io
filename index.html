@@ -1,285 +1,402 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <meta charset= "uft-8"/>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>M_Nagel_Technical_CV</title>
+      <meta 
+         charset= "uft-8"   
+         name="viewport"
+         content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"
+      />
+        
    
       <!--==========================
-         Style sheets used
+         STYLESHEETS
       ============================-->
+      <!--CAROUSEL-->
+      <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
       <!--PRELOADER-->
       <link href="css/tri-loader.css" rel="stylesheet"/> 
 
       <!--OVERALL-->
-       <link href="css/main-styles.css" rel="stylesheet"/>
+      <link href="css/main-style.css" rel="stylesheet"/>
 
+      <!--BANNER ANIMATION-->
+      <link href="css/header-style.css" rel="stylesheet"/>
 
-       <!--==========================
-         Icons
+      <!--ASIDE MENU-->
+      <link href="css/menu-style.css" rel="stylesheet"/>
+
+      <!--SKILLS BAR STYLE-->
+      <link href="css/skills-bar-style.css" rel="stylesheet"/>
+      
+      <!--==========================
+         ICONS
       ============================-->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <link rel="icon" href="media_src/images/Website_Logo.png">
-      
 
-      
-
+      <!--==========================
+         JQUERY
+      ============================-->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
    </head>
 
 
-   <body class>
-      
+   <body>
+
       <!--==========================
-         Loading
+         LOADER
       ============================-->
-      <div id='tri-loader'>
-         <div class="loader-wrapper">
-            <div class='triangle'></div>
-            <div class='triangle'></div>
-            <div class='triangle'></div>
-            <div class='triangle'></div>
-            <div class='triangle'></div>
-            <h4 class="loading">LOADING...</h4>
-         </div>
-      </div>
+      <!--<div id="tri-loader">
+
+         <div class="triangle"></div>
+         
+         <div class = "triangle"></div>
+         
+         <div class = "triangle"></div>
+         
+         <div class = "triangle"></div>
+         
+         <div class = "triangle"></div>
+
+         <p class="loading">LOADING...</p>
+
+         <div id="status"></div>
+
+      </div>-->
+     
+
+
+      <!--==========================
+         NAV BUTTON & MENU
+      ============================-->   
+      <!--nav button-->
+      <header>
+         <button class="nav-btn nav-btn-lines nav-btn-x">
+            <span class="btn-lines"></span>
+         </button>
+      </header>
       
-      <!--==========================
-         Header
-      ============================-->
-      <section id="header">
-         <div class="header-wrapper">
-            <!--Header Background Animation-->
-            <canvas id="triangle-animation">
-               <div class="header-background">
 
-               </div>
 
-            </canvas>
-
-            <!--Name-->
-            <div id="name"> 
-               <div class="hello">Hello, I'm <br><span class="name-highlight">Monique Nagel</span>.
-            </div>
-
-            <!--Button-->
-            <div id="header-button"> 
-               <a href="#profile"><button class="btn-view-cv">View My CV</button></a>
-            </div>
-
-         </div>       
-      </section>
-
-      <!--==========================
-            Navbar
+      <main> 
+         <!--==========================
+            BANNER
          ============================-->
-         <!--Default Navbar-->
-         <div id="navbar">
-            <div class="nav-wrapper">
-               <nav>
-                  <ul>
-                     <li><a href="#header">home</a></li>
-                     <li><a href="#profile">profile</a></li>  
-                     <li><a href="#background">background</a></li>                      
-                     <li><a href="#skills">skills</a></li>
-                     <li><a href="#portfolio">portfolio</a></li>
-                     <li><a href="#footer">contact</a></li>
-                  </ul>
-               </nav>                        
-            </div>
+         <!--#home-->
+         <div id="home">
+            <div class="banner-wrapper">
+
+               <div id="animation-box">
+
+                  <div id="triangle-animation">
+                     <div class="triangle"></div>
+                     <div class = "triangle"></div> 
+                     <div class = "triangle"></div>
+                     <div class = "triangle"></div>
+                     <div class = "triangle"></div>
+                  </div>
+                  
+               </div>    
+
+   
+            </div>  
+            <!--Introduction-->
+            <div id="banner-name"> 
+               <div class="hello">Hello, I'm <br><span class="name-highlight">Monique Nagel</span>.
+               </div>
+            </div>      
          </div>
 
-         <!--Mobile Navbar-->
 
-      
-      <!--==========================
-         Profile
-      ============================-->             
-      <!--#profile-->
-      <section id="profile">
-         <div class="profile-wrapper"></div>
-            <div class="profile-carousel">
-               <h1>profile</h1>
-               <div id="picture-of-me">
 
-               </div>
+         <!--==========================
+            PROFILE
+         ============================-->    
+         
 
-               <div class="about-me">
-                  <h2>about me</h2>
-                  <p>I am a 21 year-old IT student finishing my undergraduate studies at NWU Vanderbijilpark in 2020.
-                  <br>I identify myself as a lifelong learner that aspires to continuously improve myself in all aspects of my life.</p>
+         <div id="box">
+            <!--#profile-->
+            <div id="profile">
+               <div class="profile-wrapper">
+                  <h1>profile</h1>
 
-                  <!--professional cv download-->
-                  <div class="pcv-btn">
-                     <a href="media_src/pdfs/Monique_Nagel_CV_Professional.pdf" download="Monique_Nagel_Professional_CV"><button class="pcv-download-btn"><b>Download Professional CV</b></button>
-                     </a><br>
+                  <div id="picture-of-me">
+                     <img src="media_src/images/mnImg.png">
                   </div>
 
-                  <!--creative cv download-->
-                  <div class="ccv-btn">
-                     <br><a href="media_src/pdfs/Monique_Nagel_CV_Creative.pdf" download="Monique_Nagel_Creative_CV"><button class="ccv-download-btn"><b>Download Creative CV</b></button></a> 
-                  </div>
-               </div>
-                  
-               <div class="testimonial">
-                  <h2>testimonial</h2>
-                  <blockquote><i>Monique was my student in 2019 and impressed me with her wide-ranging intellectual curiosity, passion for work&#47life, budding leadership skills and audacious spirit.</i><br>
-                     <span><b>Lance Bunt, Lecturer at NWU</b> </span>
-                  </blockquote>
+                  <div class="profile-carousel js-flickity"
+                  data-flickity-options='{ "wrapAround": true }'>
 
-                  <div class="recommendation-btn">
-                     <a href="media_src/pdfs/Monique_Recommendation.pdf"download="Monique_Nagel_Recommendation"><button class="recommendation-view-btn"><b>View Recommendation Letter</b></button></a>
-                  </div>
-               </div>
+                     <div class="profile-item">
 
-               <div class= "p-traits-skills">
-                  <h2>personal traits & skills</h2>
-                  <p>I am <b>passionate about learning more</b> about the IT field and concepts and skills that are relevant to it.<br>
-                  <br>I take pride in the <b>planning of my work</b> and I am <b>motivated</b> in reaching the goals I laid out for myself while remaining <b>flexible</b> and <b>open-minded</b> when I stumble upon problems.<br>
-                  <br>I find myself <b>drawn to leadership positions</b> where I can properly <b>delegate tasks</b> among group members and establish a healthy group dynamic; it is important for me to be able to trust my group members and vice versa.<br>
-                  <br>I am <b>orientated in receiving results</b> and I believe that I should <b>take responsibility</b> by completing tasks through researching the concepts I will be working with, as well as <b>consulting others</b> when I face a difficult task.<br>
-                  <br>I <b>enjoy learning more</b> and I find myself looking forward to the next opportunity or challenge that comes my way.</p>
-               </div>
+                        <div class="about-me">
+                           <h2>about me</h2>
+                           
+                           <p>I am a 21 year-old IT student finishing my undergraduate studies at NWU Vanderbijilpark in 2020.
+                           <br>I identify myself as a lifelong learner that aspires to continuously improve myself in all aspects of my life.</p>
 
-               <div class="hobbies">
+                           <!--professional cv download-->
+                           <div class="pcv-btn">
 
-                  <div class="hobbies-list">
+                              <a href="media_src/pdfs/Monique_Nagel_CV_Professional.pdf" download="Monique_Nagel_Professional_CV" target="_blank"><button class="pcv-download-btn">Download<br>Professional CV</button>
+                              </a><br>
+
+                           </div>
+                           
+                           <!--creative cv download-->
+                           <div class="ccv-btn">
+
+                              <br><a href="media_src/pdfs/Monique_Nagel_CV_Creative.pdf" download="Monique_Nagel_Creative_CV" target="_blank"><button class="ccv-download-btn">Download<br>Creative CV</button></a> 
+                     
+                           </div>
+                        </div>
+
+                     </div>
 
                      
+                     <div class="profile-item">
+
+                        <div class= "p-traits-skills fade">
+
+                           <h2>personal traits & skills</h2>
+                           <p>I am <b>passionate about learning more</b> about the IT field and concepts and skills that are relevant to it.<br>
+                           <br>I take pride in the <b>planning of my work</b> and I am <b>motivated</b> in reaching the goals I laid out for myself while remaining <b>flexible</b> and <b>open-minded</b> when I stumble upon problems.<br>
+                           <br>I find myself <b>drawn to leadership positions</b> where I can properly <b>delegate tasks</b> among group members and establish a healthy group dynamic; it is important for me to be able to trust my group members and vice versa.<br>
+                           <br>I am <b>orientated in receiving results</b> and I believe that I should <b>take responsibility</b> by completing tasks through researching the concepts I will be working with, as well as <b>consulting others</b> when I face a difficult task.<br>
+                           <br>I <b>enjoy learning more</b> and I find myself looking forward to the next opportunity or challenge that comes my way.</p>
+
+                        </div>
+                     </div>
+
+
+                     <div class="profile-item">
+
+                        <div id="hobbies">
+
+                           <h2>hobbies & interests</h2>
+
+                           <div class="hobbies-list fade">
+                              <p>
+                                 <ul>
+                                    <li><b>&#9654;</b>  I enjoy reading books along with writing stories.<b>&#9664;</b></li>
+                                    <li><b>&#9654;</b>  I have a fondness of discussing and analyzing various topics such as  absurd concepts, books, movies, music, philosophy, poetry or any topic related to  computer science.<b>&#9664;</b></li>
+                                    <li><b>&#9654;</b>  I like to play video games that have a strategic aspect to them.<b>&#9664;</b></li>
+                                       <ul>
+                                          <li>Below are games that I have on <b>Steam</b>:</li> 
+                                       </ul>
+                                    </li>
+                                 </ul>
+                              </p>
+
+                              <!--<div class="steam-games">
+                              <div class="steam-gallery" data-user="MoniqueNagel"></div>
+                              </div>-->
+
+                           </div>
+                        </div>      
+                     </div>
+
+                  </div> 
+               </div>
+            </div> 
+         </div>
+         
+
+
+         <!--==========================
+            SKILLS
+         ============================-->
+         <div id="box">
+            <!--#skills-->    
+            <div id="skills">
+
+               <div class="skill-wrapper"></div>
+                  <h1>skills</h1>
+                  
+                  <div class="carousel">
+
+                     <h2>technical skills</h2>   
+                     <div class="skill-bar-wrapper">
+
+                        <div class="skill-bar" skill-percent="72">
+                           <span class="label">C#</span>
+                           <bar class="bar"></bar>
+                           <span class="bar-percent"></span>
+                        </div> 
+
+                        <div class="skill-bar" skill-percent="35">
+                           <span class="label">C++</span>
+                           <bar class="bar"></bar>
+                           <span class="bar-percent"></span>
+                        </div> 
+
+                        <div class="skill-bar" skill-percent="72">
+                           <span class="label">CSS</span>
+                           <bar class="bar"></bar>
+                           <span class="bar-percent"></span>
+                        </div> 
+
+                        <div class="skill-bar" skill-percent="72">
+                           <span class="label">HTML</span>
+                           <bar class="bar"></bar>
+                           <span class="bar-percent"></span>
+                        </div> 
+
+                        <div class="skill-bar" skill-percent="74">
+                           <span class="label">Java</span>
+                           <bar class="bar"></bar>
+                           <span class="bar-percent"></span>
+                        </div> 
+
+                        <div class="skill-bar" skill-percent="45">
+                           <span class="label">JavaScript</span>
+                           <bar class="bar"></bar>
+                           <span class="bar-percent"></span>
+                        </div> 
+
+                        <div class="skill-bar" skill-percent="46">
+                           <span class="label">Python</span>
+                           <bar class="bar"></bar>
+                           <span class="bar-percent"></span>
+                        </div>
+
+                     </div>
                   </div>
+               </div>
+            </div>
+         </div>
+            
 
-                  <div class="steam-games">
 
+         <!--==========================
+            PORTFOLIO
+         ============================-->
+         <div id="box">
+            <!--#portfolio-->           
+            <div id="portfolio">
+               <div class="portfolio-wrapper">
+                  <h1>portfolio</h1>
 
-                  </div>
+                  <div class="portfolio-carousel">
+
+                     <div class="github-widget" data-user="MoniqueNagel"></div>
+
+                  </div>       
 
                </div>
             </div>  
          </div>
-
-         
-         <!--==========================
-            Background
-         ============================-->
-         <!--#background-->
-         <section id="background">
-            <div class="background-wrapper">
-               <h1>background</h1>
-               <div class="background-carousel"></div>
-
-                  <div class="education">
-
-
-                  </div>
-
-                  <div class="work">
-
-
-                  </div>
-
-                  <div class="awards">
-
-
-                  </div>
-
-               </div>
-            </div>
-         </section>
-
-
-         <!--==========================
-            Skills
-         ============================-->
-         <!--#skills-->
-         <h1>skills</h1>
-         <section id="skills">
-            <div class="skill-wrapper">
-
-               
-               
-
-
-
-            </div>
-         </section>
-
-
-         <!--==========================
-            Portfolio
-         ============================-->
-         <!--#portfolio-->
-         
-         <section id="portfolio">
-            <div class="portfolio-wrapper">
-               <h1>portfolio</h1>
-               <div class="portfolio-carousel">
-                  <div class="github-widget" data-user="MoniqueNagel"></div>
-               </div>              
-            </div>
-         </section>  
-         
-         <!--==========================
-            CONTACT
-         ============================-->
-         <!--#contact-->
-         <h1>contact</h1>
-         <section id="contact">
             
 
-         </section>
 
-      </div>
+         <!--==========================
+            TESTIMONIALS
+         ============================-->
+         <div id="box">
+            <div id="testimonials">
+               <div class="testimonial-wrapper">
+                  <h1>testimonial</h1>
+                  <div class="testimonial-carousel">
+                     <div class="testimonial">
+                        <blockquote><i>"Monique was my student in 2019 and impressed me with her wide-ranging intellectual curiosity, passion for work&#47life, budding leadership skills and audacious spirit."</i><br>
+                           <span><b>Lance Bunt, Lecturer at NWU</b> </span>
+                        </blockquote>
+            
+                        <div class="recommendation-btn">
+                           <a href="media_src/pdfs/Monique_Recommendation.pdf"download="Monique_Nagel_Recommendation" target="_blank"><button class="recommendation-view-btn" onclick="">View Recommendation Letter</button></a>
+                        </div>
 
-
-      <!--==========================
-         FOOTER
-      ============================-->
-      
-      
-
-
-      <section id="footer">
-         <div class="footer-wrapper">
-
-            <div class="social-media">
-               <a href="https://www.linkedin.com/in/monique-nagel-ba2a2b1a5" class="fa fa-linkedin"></a>
-               <a href="https://github.com/MoniqueNagel" class="fa fa-github"></a>
-               <a href="https://join.skype.com/invite/jOqWz5xzw4oC" class="fa fa-skype"></a>
-               <a href="https://www.reddit.com/user/MoniqueNagel" class="fa fa-reddit"></a>  
-            </div>
-
-            <div class="footnote">
-               <p>Created by MONIQUE NAGEL | 2020</p>
+                     </div>
+                  </div>
+               </div> 
             </div>
          </div>
-      </section>
-
-
-
-      
-      <!--==========================
-         JavaScripts used
-      ============================-->
-      <!--Local copy of jquery file--> 
-      <script src="js/jquery.js"></script>
-
-      <!--main JS file-->
-      <script src="js/main.js"></script>
-   
-
-
-      <!--JS files for API-->
-      <script src="js/apis/github/github.js"></script>
-      <script src="js/apis/messenger/messenger.js"></script>
-      <script src="js/apis/steam.js"></script>
-      
-
-
-      
          
+         <!--==========================
+            FOOTER
+         ============================-->
+         <div id="footer-box">
+            <!--#contact-->
+            <div class="contact-box">
+               <h1 class="contact">contact</h1>
+               <form id="contact-form">
+
+                  <!--input for a user name-->
+                  <input type="text" name="senderName" id="name" placeholder="Enter your name" required><br>
+
+                  <!--input for a user email-->
+                  <input type="email" name="senderEmail" id="email" placeholder="Enter your email" required><br>
+
+                  <!--input for a user message-->
+                  <textarea id="message" name="message" placeholder="Write your message..."></textarea><br>
+
+                  <!--button to send message-->
+                  <input class="button" type="submit" id="submit" value="submit"/>
+
+               </form>
+            </div>
+
+            <div id="footer">
+               <div class="footer-wrapper">
+   
+                  <div class="social-media">
+                     <a href="https://www.linkedin.com/in/monique-nagel-ba2a2b1a5" target="_blank" class="fa fa-linkedin"></a>
+                     <a href="https://github.com/MoniqueNagel" target="_blank" class="fa fa-github"></a>
+                     <a href="https://join.skype.com/invite/jOqWz5xzw4oC" target="_blank" class="fa fa-skype"></a>
+                     <a href="https://www.reddit.com/user/MoniqueNagel" target="_blank" class="fa fa-reddit"></a>  
+                  </div>
+   
+                  <div class="footnote">
+                     
+                     <span>Created by MONIQUE NAGEL | 2020</span>
+
+                  </div>
+               </div>
+            </div>
+         </div>
+            
+      </main>
+
+      <!--nav menu-->
+      <nav class = "nav-wrapper">
+         <ul class="navbar">
+            <li><a href="#home">home</a></li>
+                  
+            <li><a href="#profile">profile</a></li>
       
+            <li><a href="#skills">skills</a></li>
+      
+            <li><a href="#portfolio">portfolio</a></li>
+
+            <li><a href="#testimonials">testimonials</a></li>
+      
+            <li><a href="#footer">contact</a></li>
+         </ul>
+         <span class="current-marker"></span>
+      </nav>
 
       
- 
+
+      <!--==========================
+         JS FILES
+      ============================-->
+      <!--main JS File-->
+      <script src="js/index.js"></script>
+
+      <!--PRELOADER-->
+      <script src="js/preloader.js"></script>
+
+
+      <!--CONTENT JS FILES-->
+      <script src="js/navbar.js"></script>
+
+      <!-- LOCAL API's -->
+      <script src="js/apis/github.js"></script>
+      <script src="js/apis/messenger.js"></script>
+      <script src="js/apis/steam.js"></script>
+
    </body>
 </html>

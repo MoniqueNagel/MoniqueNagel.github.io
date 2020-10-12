@@ -1,0 +1,751 @@
+/*===================================
+   Colour Scheme:
+
+   #03989E - viridian green
+
+   #127986 - metallic seaweed
+
+   #20596D - blue sapphire
+
+   #23405D - indigo dye
+
+   #25274D - space cadet
+
+   #312045 - dark purple
+
+   #3C193C - lighter dark purple
+
+   #471234 - tyrian purple
+
+   #520A2B - lighter tyrian purple
+
+   #F6F6F6 - white
+
+   #363538 - grey
+===================================*/
+
+/*==========================
+   BODY
+============================*/
+html {
+   overflow-x: hidden;
+   height: 100%;
+}  
+
+body {
+   margin: 0;
+   padding: 0;
+   height: 100%;
+   width: 100%;
+   background: #363538; 
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   display: block;
+}
+
+main {
+   margin-top: 50px;
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+}
+
+/*box to place all heading and their contents in*/
+#box {
+   box-sizing: border-box;
+   padding: 20px;
+   display: block;
+   background: #F6F6F6;
+   text-align: center;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   margin-left: 100px;
+   margin-right: 100px;
+}
+
+/*style for all buttons on page*/
+button { 
+   color:#2b3145;
+   background: #03989E;
+   border: solid #03989E 2px;
+   display:inline-block;
+   font-size: 16px;
+   overflow: hidden;
+   padding: 10px 32px;  
+   text-align: center;
+   text-decoration: none;
+   margin: 15px;
+   text-transform: capitalize;
+   font-weight: bold;
+   cursor: pointer;
+   align-content: center;
+}
+
+button:hover {
+   opacity: 0.7;
+}
+
+h1 { 
+   text-align: center;
+   padding-top: 20px;
+   padding-bottom: 2px;
+   margin: 20px;
+   color: #520A2B;
+   text-transform: uppercase;
+   font-size: 24px;
+   line-height: 25.5px;
+   border-bottom: 1px solid #520A2B;
+   border-bottom-width: 70% ;
+}
+
+h2 {
+   text-align: center;
+   padding: 10px;
+   margin: 10px;
+   color: #2b3145;
+   text-transform: uppercase;
+   font-size: 16px;
+   line-height: 16px;
+}
+
+h3 {
+   text-align: left;
+   padding: 2px;
+   margin: 5px;
+   color: #8D8C8A;
+   font-size: 16px;
+   line-height: 18px;
+   text-align: center;
+   width: 100%;
+
+}
+
+li, ul {
+   list-style: none;
+   padding: 20px;
+   color: #8D8C8A;
+   font-size: 16px;
+   line-height: 32px;
+}
+
+/*quotes*/
+p, blockquote {
+   text-align: center;
+   color: #8D8C8A;
+   margin:30px;
+   line-height: 24px;
+
+}
+
+/*bold text highlight*/
+b {
+   /*style*/
+   color: #520A2B;
+}
+
+
+
+/*==========================
+  NAVBAR MENU - Overall
+============================*/
+/*modifies the layout and appearance of navbar menu*/
+.nav-wrapper {
+   background-color: #363538;
+   box-shadow: 4px 0px 15px 0px #03989E;
+   height: 100%;
+   padding-top: 80px;
+   perspective: 1000px;
+   position: fixed;
+   left:0;
+   top: 0;
+   transform: translateX(-100%);
+   transition: transform 0.5s, visibility 0.5s;
+   visibility: hidden;
+   width: 200px;
+}
+ 
+/*sizing and colour of nav button*/
+header {
+   box-sizing: border-box;
+   height: 80px;
+   left: 0;
+   position: fixed;
+   text-align: left;
+   top: 0;
+   transition: transform 0.7s;
+   width: 100%;
+   z-index: 500;
+   margin-bottom: 60px;
+}
+
+
+
+/*==========================
+   NAVBAR MENU - button
+============================*/
+/*adds button item*/
+.nav-btn{
+   text-transform: uppercase;
+   outline: transparent;
+   margin: 20px;
+}
+
+/*middle line for nav button*/
+.btn-lines {
+   background: #03989E;
+   display: inline-block;
+   height: 3px;
+   width: 30px;
+   position: relative;
+}
+
+/*top and bottom line for nav button*/
+.btn-lines:after, .btn-lines:before {
+   background: #03989E;
+   display: inline-block;
+   height: 3px;
+   width: 30px;
+   content: "";
+   left: 0;
+   position: absolute;
+}
+
+/*position of top line*/
+.btn-lines:after {
+   top: 8px;
+}
+
+/*position of bottom line*/
+.btn-lines:before {
+   top: -8px;
+}
+
+/*appearance of lines before button is clicked to open navbar*/
+.nav-btn-lines {
+   background: transparent;
+   border: none;
+   cursor: pointer;
+   display: inline-block;
+   padding: 16px 8px;
+}
+
+/*middle line's colour is set to the background colour -> technically  invisible*/
+.nav-btn-x .btn-lines {
+   transition: background-color 0.3s ease;
+}
+
+/*middle line becomes invisible when nav button is pressed*/
+.nav-btn-x .btn-lines:after, .nav-btn-x .btn-lines:before {
+   transform-origin: 50% 50% 0;
+   transition: top 0.3s 0.4s ease, transform 0.3s ease;
+}
+
+
+/*==========================
+   NAVBAR MENU - menu
+============================*/
+/*navbar positioning*/
+.navbar {
+   position: relative;
+   transform: rotateY(90deg);
+   transform-origin: left center;
+   transition: transform 1s;
+}
+
+/*navbar links/ labels appearance*/
+.navbar a {
+   display: block;
+   text-transform: uppercase;
+   font-size: 16px;
+   line-height: 18px;
+   font-weight: bold;
+   color:  #8D8C8A;
+   text-decoration: none;
+}
+
+/*change text and background colour when hovering over a menu item*/
+.navbar a:focus, .navbar a:hover {
+   color: #03989E;
+   text-decoration: none;
+}
+
+
+/*top and bottom lines transition to from x pt1*/
+.menu-visible .nav-btn-x .btn-lines:after, .menu-visible .nav-btn-x .btn-lines:before {
+   top: 0;
+   transition: top 0.3s ease, transform 0.3s 0.3s ease;
+}
+
+/*top and bottom lines transition to from x pt2*/
+.menu-visible .nav-btn-x .btn-lines:after {
+   transform: rotate3d(0, 0, 1, 45deg);
+}
+
+/*top and bottom lines transition to from x pt3*/
+.menu-visible .nav-btn-x .btn-lines:before {
+   transform: rotate3d(0, 0, 1, -45deg);
+}
+
+
+
+/*=======================================
+   NAVBAR MENU - visibility of elements
+=========================================*/
+/*makes menu and other elements within nav-wrapper visible*/
+.menu-visible .nav-wrapper {
+   transform: translateX(0);
+   visibility: visible;
+}
+
+.menu-visible .navbar {
+   transform: rotateY(0deg);
+}
+
+.nav li.active a {
+   background-color: #212635;
+}
+
+.menu-visible .nav-btn-x .btn-lines {
+   background: transparent;
+}
+
+/*==========================
+   BANNER
+============================*/
+.banner-wrapper{
+   box-sizing: border-box;
+   background-color: #363538;
+   width: 100%;
+   height:400px; 
+   margin-top: auto;
+   margin-bottom: 30px;
+}
+
+.hello{
+   margin-top: 30px;
+   margin-bottom: 20px;
+   text-align: center;
+   font-size: 50px;
+   color: #03989E;
+   font-weight: bold;
+   line-height: 55px;
+   width: 100%;
+}
+ 
+.name-highlight{
+   text-align: center;
+   width: 100%;
+   font-size: 60px;
+   font-weight: bolder;
+   line-height: 65px;       
+   background:transparent;
+   background-color: transparent;
+   background: linear-gradient(#312045, #3C193C, #471234, #520A2B);
+   /* Use the text as a mask for the background. */
+   /* This will show the gradient as a text color rather than element bg. */
+   background-clip: text;
+   -webkit-background-clip: text;
+   -moz-background-clip: text;
+   -webkit-text-fill-color: transparent;  
+   -moz-text-fill-color: transparent;  
+}
+
+#animation-box{
+   box-sizing: border-box;
+   display: block;
+   position: absolute;
+   background: #363538;
+   width: 100%;
+}
+
+#triangle-animation {
+   box-sizing: border-box;
+   width: 600px;
+   margin: 360px auto 0 auto;
+}
+
+.triangle {
+   width: 0px;
+   height: 0px;
+   opacity: 0.75;
+   margin: auto;
+   position: relative;
+   animation: enlarge_1 2s infinite;
+}
+
+.triangle:nth-child(2) {
+   animation: enlarge_2 2s infinite;
+   animation-delay: 0.2s;
+}
+
+.triangle:nth-child(3) {
+   animation: enlarge_3 2s infinite;
+   animation-delay: 0.4s;
+}
+
+.triangle:nth-child(4) {
+   animation: enlarge_4 2s infinite;
+   animation-delay: 0.6s;
+}
+
+.triangle:nth-child(5) {
+   animation: enlarge_5 2s infinite;
+   animation-delay: 0.8s;
+}
+
+@keyframes enlarge_1 {
+   from {
+      opacity: 1;
+      border-left: 2px solid transparent;
+      border-right: 2px solid transparent;
+      border-bottom: 4px solid #03989E;
+      margin-top: 0px;
+   }
+
+   to {
+      opacity: 0;
+      border-left: 200px solid transparent;
+      border-right: 200px solid transparent;
+      border-bottom: 300px solid #03989E;
+      margin-top: -300px;
+   }
+}
+
+@keyframes enlarge_2 {
+   from {
+      opcatiy: 1;
+      border-left: 2px solid transparent;
+      border-right: 2px solid transparent;
+      border-bottom: 4px solid #20596D;
+      margin-top: -4px;
+   }
+
+   to {
+      opacity: 0;
+      border-left: 200px solid transparent;
+      border-right: 200px solid transparent;
+      border-bottom: 300px solid #20596D;
+      margin-top: -300px;
+   }
+}
+
+@keyframes enlarge_3 {
+   from {
+      opacity: 1;
+      border-left: 2px solid transparent;
+      border-right: 2px solid transparent;
+      border-bottom: 4px solid #25274D;
+      margin-top: -4px;
+   }
+   to {
+      opacity: 0;
+      border-left: 200px solid transparent;
+      border-right: 200px solid transparent;
+      border-bottom: 300px solid #25274D;
+      margin-top: -300px;
+   }
+}
+
+@keyframes enlarge_4 {
+   from {
+      opacity: 1;
+      border-left: 2px solid transparent;
+      border-right: 2px solid transparent;
+      border-bottom: 4px solid #3C193C;
+      margin-top: -4px;
+   }
+   to {
+      opacity: 0;
+      border-left: 200px solid transparent;
+      border-right: 200px solid transparent;
+      border-bottom: 300px solid #3C193C;
+      margin-top: -300px;
+   }
+}
+
+@keyframes enlarge_5 {
+   from {
+      opacity: 1;
+      border-left: 2px solid transparent;
+      border-right: 2px solid transparent;
+      border-bottom: 4px solid #520A2B;
+      margin-top: -4px;
+   }
+   to {
+      opacity: 0;
+      border-left: 200px solid transparent;
+      border-right: 200px solid transparent;
+      border-bottom: 300px solid #520A2B;
+      margin-top: -300px;
+   }
+}
+
+/*==========================
+   PICTURE
+============================*/
+#picture-of-me{
+   display: block;
+   margin: 20px; 
+}
+
+img {
+   height: 100%;
+   width: 30vw;
+   padding-left: 3vw;
+   padding-right: 3vw;
+   padding-top: 2vh;
+   padding-bottom: 2vh;
+   left: 0;
+   top: 0;
+}
+
+
+/*==========================
+   PROFILE
+============================*/
+.profile-wrapper {
+   background: #F6F6F6;
+   text-align: center;
+}
+
+.hobbies-list ul {
+   list-style: none;
+   margin: 12px 0;
+   padding: 0 16px;
+   color: #8D8C8A;
+   font-size: 16px;
+   line-height: 32px;
+}
+
+.hobbies-list b {
+   color: #03989E;
+}
+
+
+
+/*==========================
+   SKILLS
+============================*/
+.skill-bar-wrapper {
+   max-width: 1000px;
+   width: 70%;
+   /*margin-bottom: 20px;*/
+   padding: 30px;
+   margin:auto;
+}
+
+/* Skills bar effects */
+.skill-bar {
+   position: relative;
+   display: inline-block;
+   width: 100%;
+   background: lightgray;
+   height: 35px;
+   width: 100%;
+   margin-top: 10px;
+   /*margin-left: 100px;
+   margin-bottom: 16px;*/
+   text-align: justify;
+}
+
+.label {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 80px;
+   font-weight: bold;
+   font-size: 14px;
+   color: #F6F6F6;
+   background: #03989E;
+   background: rgba(0, 0, 0, 0.5);
+   padding: 0 20px;
+   height: 35px;
+   line-height: 35px;
+}
+
+.bar {
+   height: 35px;
+   width: 0px;
+   background: #03989E;
+   display: inline-block;
+}
+
+.bar-percent {
+   position: absolute;
+   right: 10px;
+   top: 0;
+   font-size: 16px;
+   font-weight: bold;
+   height: 35px;
+   line-height: 35px;
+   color: #2b3145;
+}
+
+
+/*==========================
+   PORTFOLIO
+============================*/
+/*editing data retrieved from github through API*/
+.portfolio-carousel {
+   padding: 32px;
+   align-content: center;
+}
+
+.gw-bx-outer {
+   float: left;
+   width: 50%;
+}
+ 
+.gw-bx-outer:nth-child(2n + 1) {
+   clear: left;
+}
+ 
+.gw-bx {
+   padding: 16px;
+   margin: 0 24px 16px 0;
+}
+ 
+.gw-bx:nth-child(2n) {
+   margin: 24px;
+}
+ 
+.gw-title {
+   margin-bottom: 4px;
+}
+ 
+.gw-name {
+   font-weight: bold;
+   color: #03989E;
+   text-decoration: none;
+   text-align: center;
+}
+ 
+.gw-name:hover {
+   opacity: 50%;
+}
+ 
+.gw-repo-lang {
+   font-size: 16px;
+   color:#2b3145;;
+   text-align: center;
+}
+ 
+.gw-repo-descript {
+   color: #8D8C8A;
+   text-align: left;
+}
+ 
+
+
+/*=============================
+   FOOTER
+===============================*/
+/*footer box*/
+#footer-box {
+   display: block;
+   background: #F6F6F6;
+   text-align: center;
+   background-color: #2b3145;
+   width: 100%;
+   margin-top: 25PX;
+}
+
+.contact{
+   color: #03989E;
+   border-bottom: 1px solid #03989E;
+}
+
+.contact-box{
+   padding: 20px;
+   display: block;
+   text-align: center;
+   margin-left: 40px;
+   margin-right: 40px;
+}
+
+.footnote{
+   color: #03989E;
+}
+
+/*contact form style*/
+.contact-box{
+   box-sizing: border-box;
+}
+
+input[type=text], input[type=email], textarea{
+   width: 50vw;
+   padding: 12px;
+   border: 1px solid #ccc;
+   box-sizing: border-box;
+   margin-top: 6px;
+   margin-bottom: 16px;
+   resize: vertical;
+   font-size: 16px;
+}
+
+/*contact form button*/
+.button { 
+   color:#2b3145;
+   background-color: #03989E;
+   border: solid #03989E 2px;
+   display:inline-block;
+   font-size: 16px;
+   overflow: hidden;
+   padding: 10px 32px;  
+   text-align: center;
+   text-decoration: none;
+   margin: 5px;
+   text-transform: capitalize;
+   font-weight: bold;
+   cursor: pointer;
+}
+
+.button:hover {
+   opacity: 0.7;
+}
+
+
+/*social media*/
+.fa {
+   padding: 5px;
+   font-size: 35px;
+   width: 35px;
+   text-align: center;
+   text-decoration: none;
+   margin: 15px;
+}
+
+.fa:hover {
+   opacity: 0.7;
+   cursor: pointer;
+}
+
+.fa-linkedin {
+   background: #03989E;
+   color: #2b3145;
+   cursor: pointer;
+}
+
+.fa-github {
+   background: #03989E;
+   color: #2b3145;
+   cursor: pointer;
+}
+
+.fa-skype {
+   background: #03989E;
+   color: #2b3145;
+   cursor: pointer;
+}
+
+.fa-reddit {
+   background: #03989E;
+   color: #2b3145;
+   cursor: pointer;
+}
+
+.footnote {
+   margin-top: 30px;
+   margin-bottom: 20px;
+} 

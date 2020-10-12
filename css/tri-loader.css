@@ -1,164 +1,133 @@
-/**preloader after page has loaded**/
-#tri-loader {
-   display: none;
+body {
+   background-color: #363538;
 }
-
-/**preloader when it has to display**/
-
-#tri-loader::before {
+#triangle-animation {
    width: 600px;
    margin: 360px auto 0 auto;
 }
 
-triangleCon{
-   height:600px;
-}
-
-#tri-loader::before .triangle {
+.triangle {
    width: 0px;
    height: 0px;
    opacity: 0.75;
    margin: auto;
-   position: absolute;
-   top: 50%;
-   left:50%;
-   transform: translate(-50%, -50%);
+   position: relative;
    animation: enlarge_1 2s infinite;
 }
- 
-#tri-loader::before .triangle:nth-child(2) {
+
+.triangle:nth-child(2) {
    animation: enlarge_2 2s infinite;
    animation-delay: 0.2s;
 }
- 
-#tri-loader::before .triangle:nth-child(3) {
+
+.triangle:nth-child(3) {
    animation: enlarge_3 2s infinite;
    animation-delay: 0.4s;
 }
 
-#tri-loader::before .triangle:nth-child(4) {
+.triangle:nth-child(4) {
    animation: enlarge_4 2s infinite;
    animation-delay: 0.6s;
-
 }
 
-#tri-loader::before .triangle:nth-child(5) {
+.triangle:nth-child(5) {
    animation: enlarge_5 2s infinite;
    animation-delay: 0.8s;
 }
 
-/** animation starts here **/
 @keyframes enlarge_1 {
    from {
       opacity: 1;
       border-left: 2px solid transparent;
       border-right: 2px solid transparent;
-      border-bottom: 4px solid #581845;
+      border-bottom: 4px solid #03989E;
       margin-top: 0px;
    }
+
    to {
       opacity: 0;
       border-left: 200px solid transparent;
       border-right: 200px solid transparent;
-      border-bottom: 300px solid #581845;
+      border-bottom: 300px solid #03989E;
       margin-top: -300px;
    }
 }
- 
+
 @keyframes enlarge_2 {
    from {
-      opacity: 1;
+      opcatiy: 1;
       border-left: 2px solid transparent;
       border-right: 2px solid transparent;
-      border-bottom: 4px solid #900C3F;
+      border-bottom: 4px solid #20596D;
       margin-top: -4px;
    }
+
    to {
       opacity: 0;
       border-left: 200px solid transparent;
       border-right: 200px solid transparent;
-      border-bottom: 300px solid #900C3F;
+      border-bottom: 300px solid #20596D;
       margin-top: -300px;
    }
 }
- 
+
 @keyframes enlarge_3 {
    from {
       opacity: 1;
       border-left: 2px solid transparent;
       border-right: 2px solid transparent;
-      border-bottom: 4px solid #C70039 ;
+      border-bottom: 4px solid #25274D;
       margin-top: -4px;
    }
    to {
       opacity: 0;
       border-left: 200px solid transparent;
       border-right: 200px solid transparent;
-      border-bottom: 300px solid #C70039 ;
+      border-bottom: 300px solid #25274D;
       margin-top: -300px;
    }
- }
+}
 
 @keyframes enlarge_4 {
    from {
       opacity: 1;
       border-left: 2px solid transparent;
       border-right: 2px solid transparent;
-      border-bottom: 4px solid #FF5733 ;
+      border-bottom: 4px solid #3C193C;
       margin-top: -4px;
    }
    to {
       opacity: 0;
       border-left: 200px solid transparent;
       border-right: 200px solid transparent;
-      border-bottom: 300px solid #FF5733 ;
+      border-bottom: 300px solid #3C193C;
       margin-top: -300px;
    }
 }
- 
+
 @keyframes enlarge_5 {
    from {
       opacity: 1;
       border-left: 2px solid transparent;
       border-right: 2px solid transparent;
-      border-bottom: 4px solid #FFC300;
+      border-bottom: 4px solid #520A2B;
       margin-top: -4px;
    }
    to {
       opacity: 0;
       border-left: 200px solid transparent;
       border-right: 200px solid transparent;
-      border-bottom: 300px solid #FFC300;
+      border-bottom: 300px solid #520A2B;
       margin-top: -300px;
    }
 }
-
-.loading {
-   display: none;
-}
-
-.loading::before {
+ 
+/*.loading {
    color: white;
-   font-family: Verdana, Geneva, Tahoma, sans-serif;
-   margin: auto;
    position: absolute;
-   top: 50%;
+   top: 65%;
    left:50%;
    transform: translate(-50%, -50%);
-   text-align: center;
-   font-weight: 10;
+   font-weight: bold;
    letter-spacing: 10px;
-   margin-top: 2em;
-}
-
-/*body.loading .tri-loader{
-   overflow: hidden;
-}
-
-body.loading .tri-loader{
-   display: block;
 }*/
-
-
-
-
